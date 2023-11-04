@@ -1,0 +1,106 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+    color: greenyellow;
+    font-size: 1rem;
+    text-transform: uppercase;
+    overscroll-behavior: none;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.content__slider__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content__slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    will-change: transform;
+}
+
+.project{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+}
+
+.glass__div{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0.184);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem;
+    clip-path: polygon(0% 20%, 20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%);
+
+}
+
+p{
+    margin-top: .5rem;
+    font-size: .5rem;
+}
+
+.flash{
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    background-color: greenyellow;
+    margin-left: .5rem;
+    animation: flash .5s infinite linear;
+}
+
+@keyframes flash{
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
